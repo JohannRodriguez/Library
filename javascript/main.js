@@ -86,16 +86,16 @@ myLibrary.forEach((book, index) => {
 const bookDiv = document.getElementById('my-books');
 bookDiv.appendChild(fragment);
 
-//Update read status
-const updateBtn = document.querySelectorAll(".update-read-status");
+// Update read status
+const updateBtn = document.querySelectorAll('.update-read-status');
 
 updateBtn.forEach((button) => {
   button.addEventListener('click', () => {
-    if (myLibrary[button.dataset.index].read == true) {
+    if (myLibrary[button.dataset.index].read === true) {
       myLibrary[button.dataset.index].read = false;
     } else {
       myLibrary[button.dataset.index].read = true;
-    };
+    }
     localStorage.setItem('library', JSON.stringify(myLibrary));
     location.reload();
   });
