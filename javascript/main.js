@@ -45,3 +45,43 @@ showForm.addEventListener('click', () => {
     bookForm.style.display = 'none';
   }
 });
+
+// Display saved books
+const fragment = document.createDocumentFragment()
+
+ myLibrary.forEach(function(book, index) {
+  let bookDiv = document.createElement('div');
+  bookDiv.className = 'book';
+  let bookTitle = document.createElement('h2');
+  bookTitle.textContent = book.title;
+  let bookAuthor = document.createElement('p');
+  bookAuthor.textContent = book.author;
+  let bookPages = document.createElement('p');
+  bookPages.textContent = `This book has ${book.pages} pages`;
+  let bookRead = document.createElement('p');
+  let bookReadUpdate = document.createElement('button');
+  bookReadUpdate.className = 'update-read-status button';
+  bookReadUpdate.setAttribute('data-index', index);
+  if (book.read == true) {
+    bookRead.textContent = 'You have already read this book';
+    bookReadUpdate.textContent = 'Mark as unread';
+  } else {
+    bookRead.textContent = 'You haven't read this book yet'
+    bookReadUpdate.textContent = 'Mark as read';
+  };
+  let deleteBook = document.createElement('button');
+  deleteBook.textContent = 'Remove book';
+  deleteBook.className = 'remove-book button'
+  deleteBook.setAttribute('data-index', index);
+
+  bookDiv.appendChild(bookTitle);
+  bookDiv.appendChild(bookAuthor);
+  bookDiv.appendChild(bookPages);
+  bookDiv.appendChild(bookRead);
+  bookDiv.appendChild(bookReadUpdate);
+  bookDiv.appendChild(deleteBook);
+  fragment.appendChild(bookDiv);
+});
+
+let bookDiv = document.getElementById('my-books')
+bookDiv.appendChild(fragment)
