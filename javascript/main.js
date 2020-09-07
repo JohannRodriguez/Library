@@ -62,7 +62,7 @@ myLibrary.forEach((book, index) => {
   const bookReadUpdate = document.createElement('button');
   bookReadUpdate.className = 'update-read-status button';
   bookReadUpdate.setAttribute('data-index', index);
-  if (book.read == true) {
+  if (book.read === true) {
     bookRead.textContent = 'You have already read this book';
     bookReadUpdate.textContent = 'Mark as unread';
   } else {
