@@ -50,26 +50,26 @@ showForm.addEventListener('click', () => {
 const fragment = document.createDocumentFragment()
 
  myLibrary.forEach(function(book, index) {
-  let bookDiv = document.createElement('div');
+  const bookDiv = document.createElement('div');
   bookDiv.className = 'book';
-  let bookTitle = document.createElement('h2');
+  const bookTitle = document.createElement('h2');
   bookTitle.textContent = book.title;
-  let bookAuthor = document.createElement('p');
+  const bookAuthor = document.createElement('p');
   bookAuthor.textContent = book.author;
-  let bookPages = document.createElement('p');
+  const bookPages = document.createElement('p');
   bookPages.textContent = `This book has ${book.pages} pages`;
-  let bookRead = document.createElement('p');
-  let bookReadUpdate = document.createElement('button');
+  const bookRead = document.createElement('p');
+  const bookReadUpdate = document.createElement('button');
   bookReadUpdate.className = 'update-read-status button';
   bookReadUpdate.setAttribute('data-index', index);
   if (book.read == true) {
     bookRead.textContent = 'You have already read this book';
     bookReadUpdate.textContent = 'Mark as unread';
   } else {
-    bookRead.textContent = 'You haven't read this book yet'
+    bookRead.textContent = "You haven't read this book yet";
     bookReadUpdate.textContent = 'Mark as read';
-  };
-  let deleteBook = document.createElement('button');
+  }
+  const deleteBook = document.createElement('button');
   deleteBook.textContent = 'Remove book';
   deleteBook.className = 'remove-book button'
   deleteBook.setAttribute('data-index', index);
