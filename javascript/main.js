@@ -14,7 +14,7 @@ function addBookToLibrary(title, author, pages, read) {
 
 // Add new book with user inputs
 const addBookBtn = document.getElementById('add-book-btn');
-addBookBtn.addEventListener('click', function(event) {
+addBookBtn.addEventListener('click', (event) => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const pages = document.getElementById('pages').value;
@@ -28,7 +28,7 @@ addBookBtn.addEventListener('click', function(event) {
   if (title === '' || author === '' || pages === '') {
     event.preventDefault();
     const errorMessage = document.getElementById('error');
-    return errorMessage.style.display = 'block';
+    errorMessage.style.display = 'block';
   }
 
   return addBookToLibrary(title, author, pages, read);
