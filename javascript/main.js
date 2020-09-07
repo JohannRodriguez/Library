@@ -47,9 +47,9 @@ showForm.addEventListener('click', () => {
 });
 
 // Display saved books
-const fragment = document.createDocumentFragment()
+const fragment = document.createDocumentFragment();
 
- myLibrary.forEach(function(book, index) {
+myLibrary.forEach((book, index) => {
   const bookDiv = document.createElement('div');
   bookDiv.className = 'book';
   const bookTitle = document.createElement('h2');
@@ -71,7 +71,7 @@ const fragment = document.createDocumentFragment()
   }
   const deleteBook = document.createElement('button');
   deleteBook.textContent = 'Remove book';
-  deleteBook.className = 'remove-book button'
+  deleteBook.className = 'remove-book button';
   deleteBook.setAttribute('data-index', index);
 
   bookDiv.appendChild(bookTitle);
@@ -83,5 +83,5 @@ const fragment = document.createDocumentFragment()
   fragment.appendChild(bookDiv);
 });
 
-let bookDiv = document.getElementById('my-books')
-bookDiv.appendChild(fragment)
+const bookDiv = document.getElementById('my-books');
+bookDiv.appendChild(fragment);
