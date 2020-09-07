@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button new-book-form" id="new-book-form">Create a new book!</button>
+    <div class="new-book" id="book-form" style="display: none;">
+        <h1>Add a new book</h1>
+        <form>
+            <div>
+                <label for="title">Title</label><br>
+                <input class="input-text" type="text" id="title" placeholder="Book Title">
+            </div>
+            <div>
+                <label for="author">Author</label><br>
+                <input class="input-text" type="text" id="author" placeholder="Author Name">
+            </div>
+            <div>
+                <label for="pages">Pages</label><br>
+                <input class="input-text" type="number" id="pages" placeholder="Number of pages">
+            </div>
+            <div>
+                <input type="checkbox" id="read">
+                <label for="read">Have you read this book?</label>
+            </div>
+            <button class="button" id="add-book-btn">Add new book</button>
+        </form>
+    </div>
+    <div class="my-books" id="my-books"></div>
+    <script src="./javascript/main.js"></script>
+</body>
+</html>
