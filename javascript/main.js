@@ -28,9 +28,9 @@ addBookBtn.addEventListener('click', () => {
 
   if (title === '' || author === '' || pages === '') {
     return alert('All fields must be filled');
-  };
+  }
 
-  addBookToLibrary(title, author, pages, read);
+  return addBookToLibrary(title, author, pages, read);
 });
 
 // Button to hide and show the new book form
@@ -42,5 +42,5 @@ showForm.addEventListener('click', () => {
     bookForm.style.display = 'block';
   } else {
     bookForm.style.display = 'none';
-  };
+  }
 });
