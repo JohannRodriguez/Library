@@ -19,11 +19,10 @@ addBookBtn.addEventListener('click', () => {
   const author = document.getElementById('author').value;
   const pages = document.getElementById('pages').value;
   const readCheckBox = document.getElementById('read');
+  let read = false;
 
   if (readCheckBox.checked) {
-    var read = true;
-  } else {
-    var read = false;
+    read = true;
   }
 
   if (title === '' || author === '' || pages === '') {
