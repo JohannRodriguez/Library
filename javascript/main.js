@@ -32,7 +32,7 @@ addBookBtn.addEventListener('click', (event) => {
     return;
   }
 
-  return addBookToLibrary(title, author, pages, read);
+  addBookToLibrary(title, author, pages, read);
 });
 
 // Button to hide and show the new book form
