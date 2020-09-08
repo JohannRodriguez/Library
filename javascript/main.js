@@ -105,7 +105,7 @@ updateBtn.forEach((button) => {
 const deleteBtn = document.querySelectorAll('.remove-book');
 
 deleteBtn.forEach((button) => {
-  button.addEventListener('click', function() {
+  button.addEventListener('click', () => {
     myLibrary.splice(button.dataset.index, 1);
     localStorage.setItem('library', JSON.stringify(myLibrary));
     location.reload();
