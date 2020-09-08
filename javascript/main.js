@@ -29,7 +29,7 @@ addBookBtn.addEventListener('click', (event) => {
     event.preventDefault();
     const errorMessage = document.getElementById('error');
     errorMessage.style.display = 'block';
-    return
+    return;
   }
 
   return addBookToLibrary(title, author, pages, read);
