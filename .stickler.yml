@@ -5,11 +5,12 @@ linters:
     config: './.eslintrc.json'
   
   stylelint:
-    config: './stylelint.config.js'
+    config: 'stylelint.config.js'
 
 # add the files here you want to be ignored by stylelint
 files:
   ignore:
+      - 'stylelint.config.js'
       - 'dist/*'
       - 'css/reset.css'
 
