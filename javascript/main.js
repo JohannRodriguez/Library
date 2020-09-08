@@ -100,3 +100,14 @@ updateBtn.forEach((button) => {
     location.reload();
   });
 });
+
+// Delete book
+const deleteBtn = document.querySelectorAll('.remove-book');
+
+deleteBtn.forEach((button) => {
+  button.addEventListener('click', function() {
+    myLibrary.splice(button.dataset.index, 1);
+    localStorage.setItem('library', JSON.stringify(myLibrary));
+    location.reload();
+  });
+});
