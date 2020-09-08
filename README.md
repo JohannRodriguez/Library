@@ -19,8 +19,8 @@ This project is a simple page where you can save informations about any book you
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-- The programing softeare of your preference
-- A terminal ore terminal emulator to copy the git repository
+- The programing software of your preference
+- A terminal or terminal emulator to copy the git repository
 - Git installed.
 ### Install
 - Open your terminal in the location where you want to copy the project or use the cd command to get to the location
